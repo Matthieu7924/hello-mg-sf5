@@ -3,20 +3,94 @@
 {% block title 'Studies | ' ~ parent() %}
 
 {% block body %}
-    <img src="{{ asset('/images/music.jpeg') }}" alt"tigre" width="250px" class="rounded mb-5">
+
+    <img src="{{ asset('/images/music.jpeg') }}" alt="tigre" width="250px" class="rounded mb-5">
 
     <h1 class="text-3xl sm:text-5xl font-semibold text-indigo-600 mt-5 mb-5">Music</h1>
 
-    <p class="text-gray-800 mt-10">L'oreille est hardie, un peu comme Françoise. La musique est une drogue donc il faut trouver un bon dealer.</p>
+    <p class="text-gray-800 mt-10 mb-10">L'oreille est hardie, un peu comme Françoise. La musique est une drogue, il faut donc avoir un bon dealer.</p>
 
 
 
-    <div>
+    <div class="flex flex-col md:flex-row mb-10">
+        <img src="{{ asset('/images/lv88.jpeg') }}" alt="lv88" width="250px" class="rounded mb-5 image-height">
         <audio controls>
-            <source src="{{ asset('music/LV88.mp3') }}" type="audio/mpeg">
+            <source src="{{ asset('music/LV88-HLM.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="flex flex-col md:flex-row mb-10">
+        <img src="{{ asset('/images/parquet.jpeg') }}" alt="Parquet Courts" width="250px" class="rounded mb-5 image-height">
+        <audio controls>
+            <source src="{{ asset('music/Parquet Courts - Human Performance.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="flex flex-col md:flex-row mb-10">
+        <img src="{{ asset('/images/jimi.jpeg') }}" alt="Jimi Hendrix" width="250px" class="rounded mb-5 image-height">
+        <audio controls>
+            <source src="{{ asset('music/1983... (A Merman I Should Turn to Be).mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="flex flex-col md:flex-row mb-10">
+        <img src="{{ asset('/images/jewels.jpeg') }}" alt="Jewels" width="250px" class="rounded mb-5 image-height">
+        <audio controls>
+            <source src="{{ asset('music/Run The Jewels-Angel Duster.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="flex flex-col md:flex-row mb-10">
+        <img src="{{ asset('/images/generationals.jpeg') }}" alt="Jewels" width="250px" class="rounded mb-5 image-height">
+        <audio controls>
+            <source src="{{ asset('music/Generationals- Trust.mp3') }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
 
 
+{% endblock %}
+
+{# {% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var header = document.querySelector('header');
+            var audioElements = document.querySelectorAll('audio');
+
+            audioElements.forEach(function(audio) {
+                audio.addEventListener('play', function() {
+                    header.classList.add('audio-playing');
+                });
+
+                audio.addEventListener('pause', function() {
+                    header.classList.remove('audio-playing');
+                });
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block styles %}
+    <style>
+        header {
+            z-index: 100;
+        }
+
+        header.audio-playing {
+            z-index: -1;
+        }
+    </style>
+{% endblock %} #}
+
+{% block styles %}
+    <style>
+        .image-height {
+            height: 300px; /* Ajustez la hauteur souhaitée pour les images */
+            object-fit: cover; /* Permet de conserver le ratio de l'image et de la recadrer */
+        }
+    </style>
 {% endblock %}
