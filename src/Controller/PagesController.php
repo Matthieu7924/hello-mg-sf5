@@ -42,7 +42,7 @@ public function projects():Response
 }
 
 /**
- * @Route("/music",name="app_test")
+ * @Route("/test",name="app_test")
  */
 public function test():Response
 {
