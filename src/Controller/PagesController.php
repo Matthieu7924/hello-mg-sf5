@@ -42,9 +42,9 @@ public function projects():Response
 }
 
 /**
- * @Route("/music",name="app_music")
+ * @Route("/music",name="app_test")
  */
-public function music():Response
+public function test():Response
 {
     return $this->render('pages/test.html.twig');
 }
