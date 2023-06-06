@@ -1,51 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title 'Test | ' ~ parent() %}
+{% block title 'Music | ' ~ parent() %}
 
 {% block body %}
 
 
-    <img src="{{ asset('/images/music.jpeg') }}" alt"music" width="150px" class="rounded shadow-md mt-10 mb-10">
+    <img src="{{ asset('/images/music.jpeg') }}" alt"music" width="250px" class="rounded shadow-md mt-10 mb-10">
 
     <h1 class="text-3xl sm:text-5xl font-semibold text-indigo-600 mt-5 mb-5">Music</h1>
 
     <p class="mb-10" >L'oreille est hardie, un peu comme Françoise. La musique est une drogue!! il faut daonc avoir un bon dealer</p>
 
-    <div class="flex">
-        <div class="flex-1 max-w-sm rounded-full overflow-hidden shadow-lg m-4">
-        <img src="{{ asset('/images/lv88.jpeg') }}" alt="lv88" class="w-full h-64 project-image">
+    <div>
+        <div class="flex-1 max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src="{{ asset('/images/lv88.jpeg') }}" alt="lv88" class="w-full h-32 project-image">
             <audio controls>
                 <source src="{{ asset('music/LV88-HLM.mp3') }}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="flex-1 max-w-sm rounded-full overflow-hidden shadow-lg m-4">
-        <img src="{{ asset('/images/parquet.jpeg') }}" alt="parquet courts" class="w-full h-64 project-image">
+        <div class="flex-1 max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src="{{ asset('/images/parquet.jpeg') }}" alt="parquet courts" class="w-full h-32 project-image">
             <audio controls>
                 <source src="{{ asset('music/Parquet Courts - Human Performance.mp3') }}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="flex-1 max-w-sm rounded-full overflow-hidden shadow-lg m-4">
-        <img src="{{ asset('/images/jimi.jpeg') }}" alt="jimi" class="w-full h-64 project-image">
+        <div class="flex-1 max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src="{{ asset('/images/jimi.jpeg') }}" alt="jimi" class="w-full h-32 project-image">
             <audio controls>
                 <source src="{{ asset('music/1983... (A Merman I Should Turn to Be).mp3') }}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="flex-1 max-w-sm rounded-full overflow-hidden shadow-lg m-4">
-        <img src="{{ asset('/images/jewels.jpeg') }}" alt="Vjewels" class="w-full h-64 project-image">
+        <div class="flex-1 max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src="{{ asset('/images/jewels.jpeg') }}" alt="Vjewels" class="w-full h-32 project-image">
             <audio controls>
                 <source src="{{ asset('music/Run The Jewels-Angel Duster.mp3') }}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>>
         </div>
 
-        <div class="flex-1 max-w-sm rounded-full overflow-hidden shadow-lg m-4">
-        <img src="{{ asset('/images/generationals.jpeg') }}" alt="generationals" class="w-full h-64 project-image">
+        <div class="flex-1 max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img src="{{ asset('/images/generationals.jpeg') }}" alt="generationals" class="w-full h-32 project-image">
             <audio controls>
                 <source src="{{ asset('music/Generationals- Trust.mp3') }}" type="audio/mpeg">
                 Your browser does not support the audio element.
