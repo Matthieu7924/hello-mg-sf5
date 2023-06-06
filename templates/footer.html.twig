@@ -1,0 +1,19 @@
+<footer class="my-6">
+    <div class="footer-content">
+        <p class="text-gray-400 footer-links">
+        &copy; {{ "now"|date("Y") }} &middot;
+        {% if app.request.attributes.get('_route') != 'app_home' %}
+            <a href="{{ path('app_home') }}" class="text-indigo-500 hover:text-indigo-600 underline">Home</a>
+        {% endif %}
+        {% if app.request.attributes.get('_route') != 'app_about' %}
+            <a href="{{ path('app_about') }}" class="text-indigo-500 hover:text-indigo-600 underline">About Me</a>
+        {% endif %}
+        {% if app.request.attributes.get('_route') != 'app_studies' %}
+            <a href="{{ path('app_studies') }}" class="text-indigo-500 hover:text-indigo-600 underline">Studies</a>
+        {% endif %}
+
+        <a href="https://github.com/Matthieu7924"><i class="fa-brands fa-github"></i></a>
+
+        <a href="https://www.linkedin.com/in/matthieu-garban-658708140/?originalSubdomain=fr" class="text-indigo-500 hover:text-indigo-600 underline"><i class="fa-brands fa-linkedin-in"></i></a>
+
+        </p

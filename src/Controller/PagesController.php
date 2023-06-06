@@ -9,14 +9,32 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PagesController extends AbstractController
 {
-    // #[Route('/pages', name: 'app_pages')]
 /**
  * @Route("/",name="app_home")
  */
-
-
     public function home():Response
     {
-       return $this->render('pages/home.html.twig');
+        return $this->render('pages/home.html.twig');
     }
+
+/**
+ * @Route("/about",name="app_about")
+ */
+    public function about():Response
+    {
+        return $this->render('pages/about.html.twig');
+    }
+
+    /**
+ * @Route("/studies",name="app_studies")
+ */
+public function studies():Response
+{
+    return $this->render('pages/studies.html.twig');
+}
+
+
+
+
+
 }

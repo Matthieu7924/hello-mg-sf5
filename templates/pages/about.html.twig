@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'About | ' ~ parent() %}
+
+{% block body_attributes %}{{ parent() }} class="about-page"{% endblock %}
+{% block body %}
+    <img src="{{ asset('/images/tigre.png') }}" alt"tigre" width="350px">
+
+    <h1 class="text-3xl sm:text-5xl font-semibold text-indigo-600 mt-5 mb-5">About me</h1>
+
+
+
+
+{% endblock %}
