@@ -49,6 +49,14 @@ public function projects():Response
     return $this->render('pages/projects.html.twig');
 }
 
+/**
+ * @Route("/test",name="app_test")
+ */
+public function test():Response
+{
+    return $this->render('pages/test.html.twig');
+}
+
 
 
 
