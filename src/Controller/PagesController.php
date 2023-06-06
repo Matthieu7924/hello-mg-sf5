@@ -33,7 +33,7 @@ public function studies():Response
     return $this->render('pages/studies.html.twig');
 }
 
-   /**
+/**
  * @Route("/music",name="app_music")
  */
 public function music():Response
@@ -41,6 +41,13 @@ public function music():Response
     return $this->render('pages/music.html.twig');
 }
 
+/**
+ * @Route("/projects",name="app_projects")
+ */
+public function projects():Response
+{
+    return $this->render('pages/projects.html.twig');
+}
 
 
 
