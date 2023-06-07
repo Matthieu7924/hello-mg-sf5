@@ -29,6 +29,11 @@
                     <a href="{{ path('app_test') }}" class="text-indigo-500 hover:text-indigo-700 mx-5">Music</a>
                 </li>
             {% endif %}
+            {% if app.request.attributes.get('_route') != 'app_labo' %}
+                <li>
+                    <a href="{{ path('app_labo') }}" class="text-indigo-500 hover:text-indigo-700 mx-5">Labo</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </header>

@@ -2,21 +2,6 @@
     <div class="footer-content">
         <p class="text-gray-400 footer-links">
         &copy; {{ "now"|date("Y") }} &middot;
-        {% if app.request.attributes.get('_route') != 'app_home' %}
-            <a href="{{ path('app_home') }}" class="text-indigo-500 hover:text-indigo-600 underline">Home</a>
-        {% endif %}
-        {% if app.request.attributes.get('_route') != 'app_about' %}
-            <a href="{{ path('app_about') }}" class="text-indigo-500 hover:text-indigo-600 underline">About Me</a>
-        {% endif %}
-        {% if app.request.attributes.get('_route') != 'app_studies' %}
-            <a href="{{ path('app_studies') }}" class="text-indigo-500 hover:text-indigo-600 underline">Studies</a>
-        {% endif %}
-        {% if app.request.attributes.get('_route') != 'app_projects' %}
-            <a href="{{ path('app_projects') }}" class="text-indigo-500 hover:text-indigo-600 underline">Projects</a>
-        {% endif %}
-        {% if app.request.attributes.get('_route') != 'app_test' %}
-            <a href="{{ path('app_test') }}" class="text-indigo-500 hover:text-indigo-600 underline">Music</a>
-        {% endif %}
 
         <a href="https://github.com/Matthieu7924"><i class="fa-brands fa-github"></i></a>
 

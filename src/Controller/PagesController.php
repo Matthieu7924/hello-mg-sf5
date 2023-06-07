@@ -49,6 +49,13 @@ public function test():Response
     return $this->render('pages/test.html.twig');
 }
 
+/**
+ * @Route("/labo",name="app_labo")
+ */
+public function labo():Response
+{
+    return $this->render('pages/labo.html.twig');
+}
 
 
 
