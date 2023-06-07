@@ -10,12 +10,13 @@
     <h1 class="text-3xl sm:text-5xl font-semibold text-indigo-600 mt-5 mb-5">Labo</h1>
 
     <h2>Pêle mêle
-    <video src="{{ asset('videos/ml.mp4') }}" width="640" height="360" controls>
+    <video width="640" height="360" controls>
+        <source src="{{ asset('videos/ml.mp4') }}" type="video/mp4">
         Votre navigateur ne prend pas en charge la lecture de vidéos.
     </video>
 
 
-    <h2>Black hole fun</h2>
+    <h2 class="mt-15">Black hole fun</h2>
     <audio controls>
         <source src="{{ asset('music/Soudgarden.mp3') }}" type="audio/mpeg">
         Your browser does not support the audio element.
