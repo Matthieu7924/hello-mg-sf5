@@ -3,22 +3,62 @@
 {% block title 'Studies | ' ~ parent() %}
 
 {% block body %}
-    <img src="{{ asset('/images/king.jpg') }}" alt"tigre" width="250px" class="rounded-full mb-5">
+        <img src="{{ asset('/images/king.jpg') }}" alt="king" width="250px" class="rounded-full mb-5">
+        <h1 class="text-3xl sm:text-5xl font-semibold text-indigo-600 mt-5">Studies</h1>
+        <p class="text-gray-800 mb-20">Mon parcours de formation c'est comme le labyrinthe dans Shining, ou le clown de Stephen King, ça fait peur.</p>
 
-    <h1 class="text-3xl sm:text-5xl font-semibold text-indigo-600 mt-5 mb-5">Studies</h1>
+    <style>
+        .card {
+            width: 300px; /* Ajustez la largeur comme nécessaire */
+            margin: 0 10px; /* Espacement horizontal entre les cartes */
+        }
 
-    <p class="text-gray-800 mt-10">Mon parcours de formation c'est comme le labyrinthe dans Shining, ou le clown de Stephen King, ça fait peur.</p>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
-    <p>
-        Après un bac Economique et Social, j'ai étudié les langues étrangères (anglais et espagnol) jusqu'en 3ème année de Licence. <iframe width="560" height="315" src="https://www.youtube.com/embed/lAY-x_6vFsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p class="mt-5">
-        J'ai par la suite travaillé dans le cadre d'un emploi jeune une structure dédiée à l'insertion des élèves en décrochage scolaire. Cette expérience m'ayant motivé pour m'oinvestir d'avantage dans ce secteur j'ai préparé une licence professionnelle en Science Humaines spécialisée dans le Conseil Emploi Formation Insertion validée en alternance. J'ai travaillé durant 8 ans pour le réseau des Missions Locales, notamment comme référent Justice.
-    </p>
-    <p class="mt-5">
-        Désireux de connaître le monde de l'entreprise, j'ai décidé à 33 ans de me spécialiser au domaine des ressources humaines. Après avoir validé une licence en Gestion et Administration du Personnel, je suis recruté par l'entreprise qui m'a accueilli en stage lors de ma formation. J'y resterai finalement 7 ans exerçant des missions de gestion opérationnelle, relations clients, élaboration et suivi du plan de formation et obligations légales.
-    </p>
-    <p class="mt-5">
-        Mon envie d'exercer un métier plus technique et axé sur les nouvelles technologies m'a conduit à entamer une formation de développeur Web en Janvier 2022 pour apprendre les bases HTML/CSS Javascript SQL et PHP.
-    </p>
+        .card-img-top {
+            height: 100px; /* Ajustez la hauteur comme nécessaire */
+            object-fit: cover; /* Assurez-vous que l'image remplit la hauteur définie */
+        }
+    </style>
 
+    <div class="flex-container">
+        {% set blocks = [
+            {
+                'title': 'LEA',
+                'image': 'images/LEA.jpg',
+                'content': "Après un bac Economique et Social, j'ai étudié les langues étrangères (anglais et espagnol) jusqu'en 3ème année de Licence.",
+            },
+            {
+                'title': 'CEFI',
+                'image': 'images/CEFI.jpg',
+                'content': "J'ai par la suite travaillé dans le cadre d'un emploi jeune une structure dédiée à l'insertion des élèves en décrochage scolaire. Cette expérience m'ayant motivé pour validé en alternance la licence professionnelle de Conseil Formation",
+            },
+            {
+                'title': 'GAP',
+                'image': 'images/GAP.png',
+                'content': "Désireux de connaître le monde de l'entreprise, j'ai décidé à 33 ans de me spécialiser au domaine des ressources humaines en validant une licence en Gestion et Administration du Personnel.",
+            },
+            {
+                'title': 'Développement',
+                'image': 'images/dev.jpg',
+                'content': "Souhaitant exercer un métier à la fois plus technique et axé sur les nouvelles technologies je me suis formé au développement informatique.",
+            },
+        ] %}
+        
+        {% for block in blocks %}
+            <div class="card m-3">
+                <div class="card-header">
+                    <h2 class="text-xl font-semibold">{{ block.title }}</h2>
+                </div>
+                <img src="{{ asset(block.image) }}" alt="{{ block.title }}" width="300px" height="200px" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">{{ block.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
