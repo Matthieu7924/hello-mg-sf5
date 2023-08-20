@@ -47,6 +47,22 @@
     <div class="audio-container flex">
         {# <div class="flex max-w-sm rounded overflow-hidden shadow-lg m-4"> #}
             <div class="normal">
+                <img src="{{ asset('/images/Dean_Blunt.jpg') }}" alt="Dean Blunt" class="w-full h-32 project-image">
+                <audio controls>
+                    <source src="{{ asset('music/Dean Blunt - the narcissist.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="additional-content" style="display: none;">
+                <img src="{{ asset('/images/Angleterre.png') }}" alt="Angleterre" class="w-full h-32 project-image">
+                <p>Dean Blunt - the narcissist </p>
+            </div>
+        {# </div> #}
+    </div>
+
+    <div class="audio-container flex">
+        {# <div class="flex max-w-sm rounded overflow-hidden shadow-lg m-4"> #}
+            <div class="normal">
                 <img src="{{ asset('/images/jewels.jpeg') }}" alt="jewels" class="w-full h-32 project-image">
                 <audio controls>
                     <source src="{{ asset('music/Run The Jewels-Angel Duster.mp3') }}" type="audio/mpeg">
@@ -274,7 +290,7 @@
     <div class="audio-container flex">
         {# <div class="normal flex max-w-sm rounded overflow-hidden shadow-lg m-4"> #}
             <div class="normal">
-                <img src="{{ asset('/images/Peter Von Poehl.jpg') }}" alt="Peter Von Poehl" class="w-full h-32 project-image">
+                <img src="{{ asset('/images/Peter.jpg') }}" alt="Peter Von Poehl" class="w-full h-32 project-image">
                 <audio controls>
                     <source src="{{ asset('music/Going to Where The Tea-Trees Are.mp3') }}" type="audio/mpeg">
                     Your browser does not support the audio element.
@@ -351,6 +367,54 @@
             </div>
         {# </div> #}
     </div>
+
+    <div class="audio-container flex">
+        {# <div class="flex max-w-sm rounded overflow-hidden shadow-lg m-4"> #}
+            <div class="normal">
+                <img src="{{ asset('/images/daft.jpg') }}" alt="Daft Punk" class="w-full h-32 project-image">
+                <audio controls>
+                    <source src="{{ asset('music/Around The WorldHarder, Better, Faster, Stronger.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="additional-content" style="display: none;">
+                    <img src="{{ asset('/images/France.png') }}" alt="France" class="w-full h-32 project-image">
+                    <p>Daft Punk - Around The World/Harder, Better, Faster, Stronger </p>
+            </div>
+        {# </div> #}
+    </div>
+
+        <div class="audio-container flex">
+        {# <div class="flex max-w-sm rounded overflow-hidden shadow-lg m-4"> #}
+            <div class="normal">
+                <img src="{{ asset('/images/lords.jpg') }}" alt="Lords of the Underground" class="w-full h-32 project-image">
+                <audio controls>
+                    <source src="{{ asset('music/Chief Rocka.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="additional-content" style="display: none;">
+                    <img src="{{ asset('/images/USA.jpeg') }}" alt="USA" class="w-full h-32 project-image">
+                    <p>The Lords of the underground - Chief Rocka </p>
+            </div>
+        {# </div> #}
+    </div>
+
+    <div class="audio-container flex">
+        {# <div class="normal flex max-w-sm rounded overflow-hidden shadow-lg m-4"> #}
+            <div class="normal">
+                <img src="{{ asset('/images/1000mods.jpg') }}" alt="1000 mods" class="w-full h-32 project-image">
+                <audio controls>
+                    <source src="{{ asset('music/1000mods - Vidage.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="additional-content" style="display: none;">
+                    <img src="{{ asset('/images/Grece.png') }}" alt="Grece" class="w-full h-32 project-image">
+                    <p>1000 mods - Vidage </p>
+            </div>
+        {# </div> #}
+    </div>
     
 
 {% endblock %}
@@ -398,6 +462,26 @@
             audioContainers.forEach(function(container) {
                 const audio = container.querySelector("audio");
                 const additionalContent = container.querySelector(".additional-content");
+
+                audio.addEventListener("play", function() {
+                    additionalContent.style.display = "block";
+                });
+
+                audio.addEventListener("pause", function() {
+                    additionalContent.style.display = "none";
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const audioContainers = document.querySelectorAll(".audio-container");
+
+            audioContainers.forEach(function(container) {
+                const audio = container.querySelector("audio");
+                const additionalContent = container.querySelector(".additional-content");
+
+                // Réglage du volume à 50%
+                audio.volume = 0.3;
 
                 audio.addEventListener("play", function() {
                     additionalContent.style.display = "block";
